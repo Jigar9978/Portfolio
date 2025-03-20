@@ -118,7 +118,7 @@ const Contact = () => {
                     <Github className="h-4 w-4 sm:h-5 sm:w-5 text-gray-700 dark:text-gray-300" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/jigar-gavle/"
                     className="bg-gray-100 dark:bg-gray-600 p-2 sm:p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                   >
                     <Linkedin className="h-4 w-4 sm:h-5 sm:w-5 text-gray-700 dark:text-gray-300" />
