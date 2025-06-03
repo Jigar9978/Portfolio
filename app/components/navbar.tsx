@@ -45,7 +45,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <a
-            href="#"
+            href="/"
             onClick={() => scrollTo("home")}
             className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text"
           >

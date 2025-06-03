@@ -20,3 +20,5 @@ export function useMediaQuery(query: string): boolean {
   return matches
 }
 
+// Default export for compatibility
+export default useMediaQuery

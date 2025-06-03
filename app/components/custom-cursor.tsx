@@ -2,7 +2,25 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { useMediaQuery } from "@/hooks/use-mobile"
+
+// Inline media query hook
+function useMediaQuery(query: string): boolean {
+  const [matches, setMatches] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    if (media.matches !== matches) {
+      setMatches(media.matches)
+    }
+
+    const listener = () => setMatches(media.matches)
+    media.addEventListener("change", listener)
+
+    return () => media.removeEventListener("change", listener)
+  }, [matches, query])
+
+  return matches
+}
 
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -69,4 +87,3 @@ const CustomCursor = () => {
 }
 
 export default CustomCursor
-

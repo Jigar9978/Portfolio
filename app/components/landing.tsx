@@ -1,9 +1,31 @@
 "use client"
 
+import { useEffect } from "react"
+
+import { useState } from "react"
+
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { ChevronDown } from "lucide-react"
-import { useMediaQuery } from "@/hooks/use-mobile"
+
+// Create a simple inline media query hook to avoid import issues
+function useMediaQuery(query: string): boolean {
+  const [matches, setMatches] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    if (media.matches !== matches) {
+      setMatches(media.matches)
+    }
+
+    const listener = () => setMatches(media.matches)
+    media.addEventListener("change", listener)
+
+    return () => media.removeEventListener("change", listener)
+  }, [matches, query])
+
+  return matches
+}
 
 const Landing = () => {
   const isMobile = useMediaQuery("(max-width: 768px)")
@@ -14,7 +36,7 @@ const Landing = () => {
   }
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-blue-900/20 z-0"></div>
 
@@ -59,7 +81,7 @@ const Landing = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-4 sm:px-6">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,7 +119,7 @@ const Landing = () => {
           >
             I'm a{" "}
             <TypeAnimation
-              sequence={["Developer", 2000, "Designer", 2000, "Creator", 2000]}
+              sequence={["Full Stack Developer", 2000, "Creator", 2000]}
               wrapper="span"
               cursor={true}
               repeat={Number.POSITIVE_INFINITY}
@@ -124,7 +146,7 @@ const Landing = () => {
 
       {/* Scroll down indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/1 transform -translate-x-1/2 cursor-pointer"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
         onClick={scrollToAbout}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
@@ -137,4 +159,3 @@ const Landing = () => {
 }
 
 export default Landing
-

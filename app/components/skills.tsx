@@ -6,7 +6,7 @@ import { useMediaQuery } from "@/hooks/use-mobile"
 const skillCategories = [
   {
     category: "Frontend",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS","Python","React Native"],
   },
   {
     category: "Backend",
