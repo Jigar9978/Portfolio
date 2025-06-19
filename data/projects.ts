@@ -254,5 +254,62 @@ This project demonstrates the ability to translate UI designs into frontend code
     "No external libraries used for layout – pure CSS"
   ],
 },
+{
+  id: 5,
+  title: "Responsive Chat App UI – Image-Based Design",
+  subtitle: "Frontend chat interface built from static image reference",
+  description:
+    "Developed a responsive chat app UI based on a given image using Next.js and Tailwind CSS, optimized for both desktop and mobile devices.",
+  fullDescription: `This project was part of a frontend assignment where I was provided only a **static image** of a chat application design (no Figma file). I implemented a responsive chat UI using **Next.js** and **Tailwind CSS** that closely matches the provided design.
+
+Key UI features:
+• A fixed top navbar that stays visible while scrolling  
+• A sidebar that displays contacts and smoothly collapses on mobile  
+• On clicking a contact, the respective conversation appears in the chat window  
+• Dummy chat functionality using predefined/random bot replies  
+• Typing animation and message status indicators (Sent, Received)  
+• Smooth chat message transitions and responsive layout using media queries
+
+This project highlights my frontend development skills and my ability to convert a visual reference (image only) into a responsive and functional UI.`,
+  
+  image: "/chat-app/chat-main.png", 
+  gallery: [
+    "/chat-app/chat-main.png",
+    "/chat-app/chat-1.png",
+    "/chat-app/chat-2.png"
+  ],
+  videoUrl: "/chat-app/chat-demo.mp4", 
+  videoType: "mp4",
+  technologies: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "JavaScript",
+    "Responsive Design"
+  ],
+  github: "https://github.com/Jigar9978/chat-wave",
+  live: "https://chat-wave-theta.vercel.app/", 
+  category: "Frontend Web",
+  duration: "1 day",
+  team: "Solo Project",
+  status: "Completed",
+  year: "2025",
+  featured: true,
+  challenges: [
+    "Building a full UI from a static image reference",
+    "Implementing sidebar collapse and dynamic chat transitions",
+    "Ensuring responsiveness without a design system or Figma specs",
+    "Simulating real-time chat feel using only frontend logic"
+  ],
+  features: [
+    "Image-based UI conversion to responsive layout",
+    "Fixed navbar and sidebar with smooth animations",
+    "Predefined dummy chat flow with typing animation",
+    "Message status indicators (Sent / Received)",
+    "Fully responsive for desktop and mobile screens",
+    "Frontend-only solution (no backend)"
+  ],
+}
+
 
 ]

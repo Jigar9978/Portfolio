@@ -4,6 +4,7 @@ import Projects from "./components/projects"
 import Skills from "./components/skills"
 import Contact from "./components/contact"
 import CustomCursor from "./components/custom-cursor"
+import Certificates from "./components/certificates"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Certificates/>
       <Contact />
     </>
   )
